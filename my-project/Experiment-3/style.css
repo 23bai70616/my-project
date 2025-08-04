@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  background: white;
+  color: #000;
+}
+
+.header {
+  background-color: aqua;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle {
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+.sidebar {
+  background: #f1f1f1;
+  padding: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+}
+
+.content {
+  padding: 2rem;
+}
+
+.footer {
+  background-color: aqua;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+#theme-toggle:checked ~ .dashboard {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+#theme-toggle:checked ~ .dashboard .header {
+  background-color: #222;
+  color: #fff;
+}
+
+#theme-toggle:checked ~ .dashboard .sidebar {
+  background-color: #1e1e1e;
+}
+
+#theme-toggle:checked ~ .dashboard .sidebar a {
+  color: #ccc;
+}
+
+#theme-toggle:checked ~ .dashboard .content {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+#theme-toggle:checked ~ .dashboard .footer {
+  background-color: #222;
+  color: #fff;
+}
