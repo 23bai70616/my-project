@@ -1,0 +1,59 @@
+Title:- Live Character Counter for Textarea
+
+Objective:-
+Create a simple feature that displays a live character count as the user types in a textarea.
+This helps you practice real-time event handling and dynamic content updates to improve user interaction.
+
+FIELD:- Text Area
+Requirement: Provide an input area where the user can type text.
+Behavior: The textarea accepts user input and triggers the character counting function whenever text is typed, deleted, or pasted.
+Valid Scenario:-
+The textarea is visible with placeholder text “Start typing…”.
+The textarea supports multiple lines and is responsive in size.
+
+FIELD:- Character Count Display
+Requirement: A display field that shows the total number of characters typed.
+Behavior: Initially shows 0. Updates dynamically as the user interacts with the textarea.
+Valid Scenario:-
+The character count is displayed below the textarea.
+The number updates immediately as characters are typed or removed.
+
+STRUCTURE:-
+Requirement: The page must include a heading, a textarea, and a live counter.
+Valid Structure:
+Heading (h2) labels the feature.
+Textarea (textarea) provides the input area.
+Paragraph (p) with span displays the live character count.
+Script section (<script>) contains the JavaScript logic.
+
+CODE BEHAVIOR OVERVIEW
+Element: body (Page Layout)
+Contains all visible elements: heading, textarea, and character count.
+Displays content in a simple, clean layout.
+
+Element: textarea (Input Field)
+Purpose: Allows the user to type multiple lines of text.
+Properties & Effects:
+Has an id textInput so it can be accessed in JavaScript.
+Displays placeholder text for user guidance.
+Rows and cols define its initial size.
+
+Element: p + span (Counter Display)
+Purpose: Shows the character count dynamically.
+Properties & Effects:
+The span element has an id charCount and initially displays 0.
+Gets updated automatically via JavaScript.
+
+JavaScript Functionality
+Purpose: Makes the counter dynamic.
+Process:
+Retrieves textarea (textInput) and counter span (charCount) using document.getElementById.
+Adds an input event listener on the textarea.
+Every time the user types, deletes, or pastes text, the event triggers.
+Updates the span’s content (textContent) with textInput.value.length.
+
+Learning Outcomes:-
+Learned how to link HTML and JavaScript using element IDs.
+Practiced using the input event to detect real-time user actions.
+Understood how to manipulate the DOM to update content dynamically.
+Gained experience in building a simple but functional user interface.
