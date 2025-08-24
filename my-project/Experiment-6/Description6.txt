@@ -1,0 +1,85 @@
+Title:- Interactive SVG Drawing Tool with Mouse Event Handlers
+
+
+Objective:-
+Design and build a web-based drawing tool using SVG where users can draw shapes interactively using their mouse. 
+This task deepens your understanding of JavaScript DOM manipulation, SVG element creation, and advanced event handling.
+
+FIELD:- SVG Drawing Area
+Requirement: Provide an SVG region that acts as the drawing canvas.
+Behavior: When the user presses the mouse button inside the SVG and drags, a path is drawn following the cursor. Releasing the mouse stops drawing.
+Valid Scenario:
+The SVG is visible with a light background, bordered, and sized to 500×300 (responsive enough for basic use).
+The cursor shows a crosshair to indicate drawing mode.
+
+FIELD:- Container & Heading
+Requirement: Present the drawing tool inside a bordered container with a clear title.
+Behavior: The heading labels the feature (“SVG Drawing Tool”), and the container groups the SVG neatly.
+Valid Scenario:
+A simple, readable page with a heading above the SVG.
+The container provides padding and a border for visual separation.
+
+STRUCTURE:-
+Requirement: The page must include a heading, an SVG canvas, and a script that enables drawing logic.
+Valid Structure:
+Heading (h3) labels the tool.
+SVG (<svg id="drawingArea">) serves as the drawing canvas.
+External Stylesheet (style.css) provides basic layout and visuals.
+External Script (script.js) contains all drawing behavior.
+
+CODE BEHAVIOR OVERVIEW
+Element: body (Page Layout)
+Contains the container, heading, and SVG.
+Uses a clean font and margin for readability.
+
+Element: .container (UI Grouping)
+Purpose: Visually groups the tool and keeps it compact.
+Effects: Bordered box with padding, displayed inline-block for tidy layout.
+
+Element: svg#drawingArea (Canvas)
+Purpose: The interactive area where drawing happens.
+Properties & Effects:
+Fixed width and height for predictable drawing space.
+Light background and border for contrast.
+cursor: crosshair to indicate drawing capability.
+
+
+JavaScript Functionality:-
+Purpose: Enable freehand drawing by creating and updating an SVG <path> as the mouse moves.
+Process:
+(1)Element Selection:
+Retrieve the SVG element using document.getElementById("drawingArea").
+Maintain two state variables: a boolean drawing and a reference currentPath.
+
+(2)Start Drawing (mousedown):
+Set drawing = true.
+Read the starting mouse position (offsetX, offsetY).
+Create a new SVG <path> with namespace http://www.w3.org/2000/svg.
+Set stroke color, width, no fill, and initialize the d attribute with a move command (M x y).
+Append the path to the SVG.
+
+(4)Continue Drawing (mousemove):
+If drawing is true, append a line command (L x y) to the path’s d attribute using the current mouse position.
+The path updates in real time, following the cursor and forming a freehand line.
+
+(5)Stop Drawing (mouseup):
+Set drawing = false and clear currentPath to end the current stroke.
+Edge Case Handling (mouseleave):
+If the cursor leaves the SVG while drawing, stop drawing to prevent unintended lines.
+
+Valid Scenario:
+Press–drag–release creates a single continuous stroke.
+Repeating the action creates multiple independent strokes without page reload.
+Leaving the SVG mid-draw safely ends the stroke.
+
+Styling Overview (CSS)
+Body: Clean font (Arial) and outer margin for spacing.
+Container: Solid border and padding to group the tool.
+SVG: Solid border, light background for visibility, fixed size (500×300), and crosshair cursor for user feedback.
+
+Learning Outcomes:-
+Linked HTML, CSS, and JavaScript through IDs and external files.
+Used the SVG namespace to create and manipulate vector elements (<path>).
+Handled mouse events (mousedown, mousemove, mouseup, mouseleave) to build real-time interactions.
+Updated an element’s attribute (d) incrementally to render freehand drawing.
+Practiced state management (tracking drawing status and current path) for interactive UI behavior.

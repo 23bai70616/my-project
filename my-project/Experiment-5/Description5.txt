@@ -1,0 +1,62 @@
+Title:- Dynamic Product Filter with Dropdown using JavaScript DOM Manipulation
+
+Objective:-
+Build a web-based product list that can dynamically filter and display items based on the user's selection from a dropdown menu. 
+This task helps you understand how to use JavaScript to manipulate the DOM, handle events, and update visible elements in real time.
+
+FIELD:- Dropdown (Category Selector)
+Requirement: Provide a dropdown list of categories.
+Behavior: When a user selects a category, only products belonging to that category remain visible.
+Valid Scenario:
+Default selection All shows every product.
+Choosing Clothing shows only clothing items, hiding others.
+Dropdown is clearly visible above the product list.
+
+FIELD:- Product List
+Requirement: Display products with their associated categories.
+Behavior: Each product is wrapped in a div with the class product and a data-category attribute to define its type.
+Valid Scenario:
+Products are listed in a simple vertical layout.
+Each item is displayed in a bordered box with spacing for readability.
+
+STRUCTURE:-
+Requirement: The page must include a heading, a dropdown filter, and a product display area.
+Valid Structure:
+Heading (h2): Labels the feature as "Product List".
+Select (Dropdown): Provides filtering options (All, Clothing, Electronics, Books).
+Div (productList): Contains all product items.
+Div (product): Represents each product with data-category.
+Script Section: Contains JavaScript logic for filtering.
+
+CODE BEHAVIOR OVERVIEW
+Element: body (Page Layout)
+Contains all visible elements: heading, dropdown, and product list.
+Displays content in a clean, boxed layout.
+
+Element: select (Dropdown Filter)
+Purpose: Allows the user to choose a category.
+Properties & Effects:
+Has an id category for JavaScript access.
+Includes option values like All, Clothing, Electronics, Books.
+
+Element: div.product (Product Item)
+Purpose: Represents each product in the list.
+Properties & Effects:
+Each has a data-category attribute.
+Initially visible; visibility changes dynamically based on selection.
+
+JavaScript Functionality:-
+Purpose: Implements the filtering behavior.
+Process:
+Retrieve dropdown and product items using document.getElementById and querySelectorAll.
+Add a change event listener to the dropdown.
+When category changes, check each product’s data-category.
+Show product if it matches selected category or if “All” is chosen.
+Hide product if it doesn’t match.
+
+Learning Outcomes:-
+Learned how to connect HTML structure and JavaScript logic through IDs and class selectors.
+Practiced using the change event to detect user actions in a dropdown.
+Understood how to use custom attributes (data-category) for categorizing and filtering items.
+Gained experience in looping through elements and dynamically changing their visibility.
+Learned basic CSS styling for layout clarity and readability.
