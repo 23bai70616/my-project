@@ -1,0 +1,40 @@
+Title:-
+REST API for Playing Card Collection Using Express.js
+
+Objective:-
+Build a RESTful API using Express.js to manage a collection of playing cards. This task helps you understand routing, handling HTTP methods, 
+and basic data manipulation in a Node.js backend environment.
+
+COMPONENT: CardAPI (Express Application)
+
+Purpose:
+Provides a RESTful API to manage a collection of playing cards (suit + value).
+Features:
+GET /cards → Returns the full list of cards.
+GET /cards/:id → Returns a single card by its id.
+POST /cards → Adds a new card to the collection (requires suit + value).
+DELETE /cards/:id → Removes a card by its id.
+
+Effect:
+Demonstrates building a simple API with Express.js, including CRUD operations, route parameters, JSON parsing, and error handling.
+FILE: app.js (or index.js)
+Purpose:
+Implements all endpoints for managing cards.
+
+Key Functionalities:
+State Variable:
+cards[] → Stores the collection of card objects with {id, suit, value}.
+Routes:
+GET /cards → Responds with the full card list.
+GET /cards/:id → Finds and returns a single card by id, else returns 404.
+POST /cards → Adds a new card with a unique ID, validates required fields.
+DELETE /cards/:id → Removes a card by id, else returns 404.
+
+Server Setup:
+Runs on port 3000 with a startup message in console.
+
+LEARNING OUTCOMES
+Learned how to create a REST API with Express.js.
+Practiced handling route parameters (:id) and request body parsing (express.json).
+Understood how to implement CRUD operations with arrays as in-memory storage.
+Improved skills in error handling with proper HTTP status codes.

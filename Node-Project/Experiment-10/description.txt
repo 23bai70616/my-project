@@ -1,0 +1,37 @@
+Title:- CLI Employee Management System Using Node.js and Arrays
+
+COMPONENT: EmployeeManagement (CLI Application)
+
+Purpose:
+Provides a command-line interface for managing employees (name + ID) using Node.js and arrays.
+
+Features:
+Add Employee → Prompts the user to input an employee’s name and ID, then stores them in memory.
+List Employees → Displays all employees currently stored in memory.
+Remove Employee → Removes an employee from the list by matching their ID.
+Exit → Ends the program.
+Effect:
+Demonstrates handling synchronous user input/output using Node.js readline module with an interactive menu loop.
+
+FILE: employeeManagement.js (or index.js)
+
+Purpose:
+Implements the complete CLI system for employee management.
+
+Key Functionalities:
+State Variable:
+employees[] → Stores the current list of employee objects with {id, name}.
+Menu System:
+showMenu() → Displays options and routes to appropriate handlers.
+Handlers:
+addEmployee() → Collects employee name and ID, stores them in memory.
+listEmployees() → Prints all employees with index, name, and ID.
+removeEmployee() → Finds an employee by ID and removes them.
+Exit Handling:
+Option 4 gracefully closes the program (rl.close()).
+
+LEARNING OUTCOMES
+Learned how to use Node.js readline for CLI-based user interaction.
+Practiced state management with arrays in memory.
+Understood how to implement a menu-driven program loop with switch cases.
+Improved ability to structure input validation and CRUD operations in a console app.

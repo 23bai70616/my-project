@@ -1,0 +1,42 @@
+Title:-
+Concurrent Ticket Booking System with Seat Locking and Confirmation
+
+Objective:-
+Learn how to implement a ticket booking system in Node.js that handles concurrent seat reservation requests safely using a seat locking mechanism. 
+This task helps you understand how to manage in-memory state, handle concurrent access, and design a system that prevents race 
+conditions during booking.
+
+COMPONENT: TicketBookingAPI (Express Application)
+
+Purpose:
+Provides a RESTful API to simulate a ticket booking system with seat availability, seat locking, and confirmation.
+Features:
+GET /seats → Returns the status of all seats (available, locked, booked).
+POST /lock → Locks a seat for a specific user for 60 seconds.
+POST /confirm → Confirms booking of a seat if it is locked by the same user.
+
+Effect:
+Demonstrates real-time state management with locks, timeouts, and user-specific seat control in a Node.js API.
+FILE: app.js (or index.js)
+Purpose:
+Implements the ticket booking logic with Express.js.
+Key Functionalities:
+State Variable:
+seats{} → Stores all seats with attributes:
+status → "available" | "locked" | "booked"
+lockedBy → User ID of the person who locked the seat
+lockTimer → Timeout reference for automatic unlock after 60 seconds
+Routes:
+GET /seats → Returns current status of all seats.
+POST /lock → Locks a seat for a user if available, auto-releases after 60 seconds if not confirmed.
+POST /confirm → Confirms booking if the seat is locked by the same user.
+Lock Handling:
+Uses setTimeout() to automatically reset a locked seat to available after 60 seconds if not confirmed.
+Server Setup:
+Runs on port 3000 with console log confirmation.
+
+LEARNING OUTCOMES
+Learned how to design an API that handles temporary state (locks + timeouts).
+Practiced stateful logic in an otherwise stateless HTTP system.
+Understood how to manage user-specific actions (seat locking tied to userId).
+Improved skills in Express.js routing, JSON body parsing, and error handling.
