@@ -1,0 +1,75 @@
+Title: Responsive Banking UI with Deposit/Withdrawal Buttons and Balance Display
+
+Objective:
+Design a visually appealing and responsive banking user interface using only HTML and CSS, 
+helping you practice modern layout techniques and styling without adding interactivity.
+
+1. FIELD: Balance Display
+Requirement: Display-only field showing the current balance.
+Behavior:
+Static in this version .
+Meant to be visually clear, styled with larger green text to indicate positive balance.
+
+2. FIELD: Buttons (Deposit & Withdraw)
+Requirement: Buttons must be clearly visible, styled distinctly, and accessible.
+Behavior:
+Buttons do not perform any function in this static version.
+Positioned and styled for future interactivity.
+VALID SCENARIOS:
+Buttons are visible on the page.
+Buttons are properly labeled as "Deposit" and "Withdraw".
+
+3. FORM STRUCTURE
+Requirement: All elements (balance + buttons) should be centered and enclosed within a styled container.
+VALID STRUCTURE:
+Container (.box) is centered on the page.
+Buttons are placed below the balance with proper spacing.
+
+CSS STYLING : A STRUCTURED OVERVIEW
+1. ELEMENT: body (Page Layout and Background)
+Purpose: Centers the content vertically and horizontally on the page.
+Properties & Effects:
+display: flex;, justify-content: center;, align-items: center;: Perfect center alignment.
+height: 100vh;: Ensures layout fills the full height of the viewport.
+background: #eee;: Applies a light gray background for a clean, minimal look.
+margin: 0;: Removes default spacing around the page.
+font-family: sans-serif;: Applies a modern font across the page.
+
+2. ELEMENT: .box (Main Container)
+Purpose: Contains and styles the balance and button elements.
+Properties & Effects:
+background: white;: Gives the container a clean and distinct background.
+padding: 20px;: Adds spacing inside the box.
+border-radius: 10px;: Soft rounded corners for better aesthetics.
+text-align: center;: Centers all content inside the container.
+
+3. ELEMENT: .balance
+Purpose: Displays the current account balance.
+Properties & Effects:
+font-size: 24px;: Makes the balance large and readable.
+color: green;: Represents positive balance visually.
+margin-bottom: 15px;: Adds spacing between balance and buttons.
+
+4. ELEMENT: button
+Purpose: Styles all action buttons consistently.
+
+Properties & Effects:
+width: 100%;: Makes buttons span the full container width.
+padding: 10px;: Adds internal spacing for better clickability.
+margin: 8px 0;: Adds vertical spacing between buttons.
+border: none;: Removes default browser borders.
+border-radius: 5px;: Consistent with the container styling.
+color: white;: Ensures text is readable on colored backgrounds.
+font-size: 16px;: Comfortable and clear button text size.
+
+5. ELEMENTS: .deposit and .withdraw
+Purpose: Distinguishes the two buttons by color.
+Properties & Effects:
+.deposit: background: green; – visually indicates addition of funds.
+.withdraw: background: red; – signifies deduction or caution.
+
+LEARNING OUTCOMES:-
+Learnt How to design a banking interface layout using HTML & CSS.
+Understood how to center content using Flexbox and vh units.
+Learnt how to apply clean and modern button styles using classes.
+Practiced writing visual test cases even for static pages without logic 
