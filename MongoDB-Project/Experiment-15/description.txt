@@ -1,0 +1,36 @@
+Title:- 
+E-commerce Catalog with Nested Document Structure in MongoDB
+
+Objective:-
+Learn how to design and implement a MongoDB data model using nested documents to represent a real-world e-commerce catalog. 
+This task strengthens your understanding of MongoDB’s flexible document structure, schema design, and handling complex relationships 
+inside a single collection.
+This project is a RESTful API backend designed for an e-commerce catalog. It allows you to manage products 
+and their variants in a flexible way using MongoDB’s document model. It’s built with Node.js (runtime), Express.js (web framework), and Mongoose (MongoDB ODM).
+
+Tech Stack
+Express.js → Handles routing, middleware, and request/response lifecycle.
+Mongoose → Provides a schema-based solution for MongoDB and makes database interactions easier.
+Body-Parser (or express.json() in newer Express) → Parses incoming request payloads (JSON).
+
+Features (Detailed)
+Create a New Product with Multiple Variants
+Each product has a name, price, category, and an array of variants.
+Each variant contains color, size, and stock.
+
+Example: A "T-shirt" can have multiple sizes and colors under the same product entry.
+
+Retrieve Products (GET Requests)
+All Products → Fetch every product in the database.
+By Category → Example: get all Electronics.
+By Variant Color → Example: fetch products that have a Blue variant.
+By Variant Size → Example: fetch products available in size M.
+Update a Specific Variant’s Stock
+You can update the stock quantity of a variant without affecting other variants or the whole product.
+
+Example: Update the stock of Black, Size M shoes from 10 → 20.
+
+Delete a Specific Variant
+Remove one variant (say, Red, Size L) while keeping other variants intact.
+Delete an Entire Product
+Completely remove a product and all its variants from the catalog.
