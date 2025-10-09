@@ -1,0 +1,22 @@
+Title: Middleware Implementation for Logging and Bearer Token Authentication
+
+Objective
+Learn how to build and integrate middleware functions in an Express.js application to handle request 
+logging and protect routes using a Bearer token. This task helps you understand middleware flow, 
+request validation, and how to enforce secure access to specific endpoints in a Node.js backend.
+
+Description:
+This Express.js server demonstrates middleware usage, authentication, and CRUD operations. It parses JSON requests, 
+logs all incoming requests with timestamps, and secures admin routes using a custom authentication middleware. 
+The /admin/dashboard route is protected and accessible only with a valid token (Authorization: mysecrettoken).
+
+The server also provides user management APIs using an in-memory array:
+POST /users – Add a new user
+GET /users – Retrieve all users
+PUT /users/:id – Update a user by ID
+DELETE /users/:id – Remove a user by ID
+
+Learning Outcomes:
+Implemented Express middleware and routers.
+Used authorization tokens for route protection.
+Practiced CRUD API creation and JSON handling in Node.js.

@@ -1,0 +1,34 @@
+Title: Account Transfer System with Balance Validation in Node.js
+
+Objective:
+Learn how to implement a secure money transfer API in Node.js and MongoDB without using database transactions. 
+This task helps you understand how to perform dependent multi-document updates by carefully validating balances
+and handling errors in application logic to ensure consistent and correct results.
+
+Description:
+This Express.js server simulates a secure banking system backend that supports user registration, 
+login, fund transfers, and account management. It integrates MongoDB for persistent data storage, 
+bcrypt for password encryption, and JWT for authentication, ensuring secure access to protected routes.
+
+Key Features:
+User Registration (/register): Creates a new user account with a hashed password and optional initial balance.
+User Login (/login): Validates credentials and returns a JWT token valid for 2 hours.
+Create Sample Users (/create-users): Generates predefined test accounts (Alice & Bob) for quick setup.
+Fund Transfer (/transfer): Allows authenticated users to securely transfer money between accounts while checking for sufficient balance and valid ownership.
+Middleware Protection: JWT-based authMiddleware ensures that only verified users can access protected routes.
+Error Handling: Returns proper status codes and descriptive messages for invalid requests, authentication failures, or insufficient balance.
+
+Database Design:
+Collection: users
+Fields: name, email, passwordHash, balance, and timestamps.
+Each user’s balance updates atomically during transfers.
+Security & Validation:
+Passwords stored as bcrypt hashes (not plain text).
+JWT used for sessionless authentication.
+Input fields validated for correctness and ownership checks enforced for transfers.
+
+Learning Outcomes:
+Understood full-stack backend security using JWT and bcrypt.
+Learned MongoDB schema design and CRUD operations with Mongoose.
+Practiced implementing authentication middleware in Express.
+Gained experience handling financial transactions and validation logic.

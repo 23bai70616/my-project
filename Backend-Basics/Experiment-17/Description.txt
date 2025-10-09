@@ -1,0 +1,27 @@
+Title: JWT Authentication for Secure Banking API Endpoints
+
+Objective:-
+Learn how to implement secure authentication in an Express.js application using JSON Web Tokens (JWT).
+This task helps you understand how to generate tokens,verify them in middleware, and protect sensitive 
+API routes to ensure only authorized users can access banking operations.
+
+Description:
+This Express.js server demonstrates JWT-based authentication and simple banking operations like checking balance, depositing, and withdrawing money. It uses JSON Web Tokens to secure routes and ensure only authenticated users can access or modify data.
+The app includes a login route where a user provides valid credentials to receive a JWT token. This token must be included in the Authorization header for protected routes.
+
+Key Features:
+/login (POST): Authenticates a user and returns a JWT token.
+/balance (GET): Returns the current balance (protected route).
+/deposit (POST): Adds money to the balance (requires valid token).
+/withdraw (POST): Deducts money if sufficient balance is available.
+
+Security:
+Routes are protected using authenticateToken middleware.
+JWT tokens expire after 1 hour.
+Secret key is used to sign and verify tokens.
+
+Learning Outcomes:
+Understood JWT-based authentication flow in Node.js.
+Implemented middleware for secure API access.
+Practiced request validation and response handling.
+Learned to manage state (balance) in a simple Express app.
